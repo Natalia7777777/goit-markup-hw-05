@@ -140,6 +140,7 @@ img {
   padding-bottom: 32px;
 
   color: var(--first-title-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover,
@@ -171,6 +172,8 @@ img {
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .auth-link:hover,
@@ -230,6 +233,8 @@ img {
   letter-spacing: 0.06em;
   color: var(--second-title-color);
   background-color: var(--accent-bg-color);
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
@@ -403,10 +408,13 @@ img {
   height: 44px;
   border-radius: 50%;
   color: #afb1b8;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-icon {
   fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), color 1500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-link:hover,
@@ -449,6 +457,8 @@ img {
 
   min-width: 170px;
   height: 92px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-item-link:focus,
@@ -459,6 +469,7 @@ img {
 
 .clients-item-icon {
   fill: currentColor;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --------PROJECT--------- */
@@ -484,6 +495,10 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--first-title-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-btn:hover,
@@ -493,7 +508,6 @@ img {
   cursor: pointer;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
 }
 
 .second-project-list {
@@ -511,6 +525,7 @@ img {
 
 .project-link {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-link:focus,
@@ -521,6 +536,7 @@ img {
 
 .project-img {
   position: relative;
+  overflow: hidden;
 }
 
 .project-item-description {
@@ -541,10 +557,10 @@ img {
   padding: 63px 24px;
 
   opacity: 0;
-}
+  transform: translateY(100%);
 
-.project-item-description:hover {
-  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-img::before {
@@ -558,10 +574,30 @@ img {
   height: 100%;
 
   opacity: 0;
+  transform: translateY(100%);
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-img:hover::before {
+.project-link:hover .project-item-description {
   opacity: 1;
+  transform: translateY(0);
+}
+
+.project-link:hover .project-img::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-link:focus .project-item-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-link:focus .project-img::before {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .project-description {
@@ -660,8 +696,10 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   color: var(--second-text-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover,
