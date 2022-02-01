@@ -162,7 +162,7 @@ img {
   border-radius: 2px;
 
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
 }
 
 .auth-link {
@@ -580,21 +580,9 @@ img {
     transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-link:hover .project-item-description {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.project-link:hover .project-img::before {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.project-link:focus .project-item-description {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+.project-link:hover .project-item-description,
+.project-link:focus .project-item-description,
+.project-link:hover .project-img::before,
 .project-link:focus .project-img::before {
   opacity: 1;
   transform: translateY(0);
